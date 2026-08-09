@@ -14,6 +14,12 @@ buildSync({
 	target: 'node18',
 	format: 'cjs',
 	external: ['n8n-workflow'],
+	// json-diff-ts ships as CommonJS, so esbuild bundles it as an opaque blob
+	// it can't tree-shake — dead code paths (e.g. a console.warn() inside a
+	// removeKey() helper we never call) end up in the output regardless.
+	// n8n's community node scan runs eslint's no-console rule against the
+	// shipped file, so strip every console.* call from the bundle outright.
+	drop: ['console'],
 	allowOverwrite: true,
 	logLevel: 'info',
 });
