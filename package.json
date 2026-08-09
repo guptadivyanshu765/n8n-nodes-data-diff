@@ -1,6 +1,6 @@
 {
     "name": "n8n-nodes-data-diff",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "description": "Compare two JSON objects and see exactly what changed",
     "license": "MIT",
     "homepage": "https://github.com/guptadivyanshu765/n8n-nodes-data-diff",
