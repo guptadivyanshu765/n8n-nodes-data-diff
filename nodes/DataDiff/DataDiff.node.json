@@ -1,0 +1,13 @@
+{
+	"node": "n8n-nodes-data-diff",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"categories": ["Development"],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://github.com/guptadivyanshu765/n8n-nodes-data-diff?tab=readme-ov-file"
+			}
+		]
+	}
+}

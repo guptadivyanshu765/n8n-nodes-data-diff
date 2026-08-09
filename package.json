@@ -1,0 +1,54 @@
+{
+    "name": "n8n-nodes-data-diff",
+    "version": "0.1.0",
+    "description": "Compare two JSON objects and see exactly what changed",
+    "license": "MIT",
+    "homepage": "https://github.com/guptadivyanshu765/n8n-nodes-data-diff",
+    "keywords": [
+        "n8n-community-node-package"
+    ],
+    "author": {
+        "name": "guptadivyanshu765",
+        "email": "guptadivyanshu765@gmail.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/guptadivyanshu765/n8n-nodes-data-diff.git"
+    },
+    "scripts": {
+        "build": "n8n-node build && node scripts/bundle.js",
+        "build:watch": "tsc --watch",
+        "dev": "n8n-node dev",
+        "lint": "n8n-node lint",
+        "lint:fix": "n8n-node lint --fix",
+        "release": "n8n-node release",
+        "prepublishOnly": "n8n-node prerelease",
+        "test": "jest"
+    },
+    "files": [
+        "dist"
+    ],
+    "n8n": {
+        "n8nNodesApiVersion": 1,
+        "strict": false,
+        "credentials": [],
+        "nodes": [
+            "dist/nodes/DataDiff/DataDiff.node.js"
+        ]
+    },
+    "devDependencies": {
+        "@n8n/node-cli": "*",
+        "@types/jest": "^30.0.0",
+        "esbuild": "^0.28.2",
+        "eslint": "9.32.0",
+        "jest": "^30.4.2",
+        "json-diff-ts": "^4.10.4",
+        "prettier": "3.6.2",
+        "release-it": "^19.0.4",
+        "ts-jest": "^29.4.12",
+        "typescript": "5.9.2"
+    },
+    "peerDependencies": {
+        "n8n-workflow": "*"
+    }
+}
